@@ -4,6 +4,7 @@ import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 import { NodeEnv } from './utils/enums';
 import cookieParser from 'cookie-parser';
+import { setupSwagger } from './utils';
 
 const whiteList = ['https://graftipp.online', 'https://www.graftipp.online'];
 const regexList = [/localhost:\d+$/];
@@ -45,7 +46,7 @@ async function bootstrap() {
 
     if (isDevelopment || appShowSwagger) {
         Logger.debug('/docs', 'Swagger');
-        // setupSwagger(app, isDevelopment);
+        setupSwagger(app, isDevelopment);
     }
 
     const appPort = configService.get<number>('app.port');
