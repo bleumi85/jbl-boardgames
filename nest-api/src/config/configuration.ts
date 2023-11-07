@@ -6,6 +6,7 @@ export const configuration = () => ({
     },
     jwt: {
         secret: process.env.JWT_SECRET,
-        expirationTime: parseInt(process.env.JWT_EXP_TIME, 10),
+        expTime: parseInt(process.env.JWT_EXP_TIME, 10),
+        refreshExpTime: parseInt(process.env.JWT_REFRESH_EXP_TIME, 10),
     },
 });

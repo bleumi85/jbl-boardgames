@@ -21,7 +21,7 @@ const options: Options = {
     seeder: {
         path: 'dist/seeders',
         pathTs: 'src/seeders',
-        defaultSeeder: 'UserSeeder',
+        defaultSeeder: 'AccountSeeder',
     },
     debug: process.env.NODE_ENV === NodeEnv.Dev,
     discovery: {
