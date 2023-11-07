@@ -1,0 +1,21 @@
+.layout-topbar {
+  padding      : 0;
+  height       : 5rem;
+  position     : fixed;
+  top          : 0;
+  left         : var(--menu-width);
+  width        : calc(100% - var(--menu-width));
+  z-index      : 1100;
+  transition   : background-color 1s;
+  border-bottom: 1px solid black;
+}
+
+.layout-topbar-sticky {
+  background-color: #ffffffb3;
+  // background-color: var(--surface-overlay);
+
+  @supports((-webkit-backdrop-filter: none ) or (backdrop-filter: none )) {
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter        : blur(8px);
+  }
+}
